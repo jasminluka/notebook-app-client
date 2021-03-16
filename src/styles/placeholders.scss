@@ -1,0 +1,53 @@
+%scroll-without-scrollbar {
+  overflow-y: auto;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+%text-with-dots {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+%form-button {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+%disabled-button {
+  color: $red-color;
+  background: $grey-color;
+  cursor: not-allowed;
+}
+
+%tab {
+  padding: 5px 10px;
+  background: none;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  transition: .3s;
+
+  &:first-child {
+    border-bottom-left-radius: 5px;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: 5px;
+  }
+
+  &.active {
+    color: $secondary-color;
+  }
+
+  &:hover,
+  &:active {
+    color: $secondary-color;
+  }
+}

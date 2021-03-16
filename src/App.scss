@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
+@import './styles/variables.scss';
+@import './styles/placeholders.scss';
+@import './styles/mixins.scss';
+@import './styles/header.scss';
+@import './styles/notes/notes-container.scss';
+@import './styles/notes/notes.scss';
+@import './styles/notes/note.scss';
+@import './styles/notes/note-form.scss';
+@import './styles/categories/categories-container.scss';
+@import './styles/categories/categories.scss';
+@import './styles/categories/category-form.scss';
+@import './styles/map/map.scss';
+@import './styles/map/marker.scss';
+@import './styles/map/info.scss';
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+body {
+  background: linear-gradient(to right, $primary-color, $light-primary-color);
+  width: 100%;
+}
+
+.app-container {
+  width: 750px;
+  height: 70vh;
+  margin: 80px auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+}

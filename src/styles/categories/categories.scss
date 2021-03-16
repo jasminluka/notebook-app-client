@@ -1,0 +1,74 @@
+.categories {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 155px);
+  grid-auto-rows: 100px;
+  gap: 30px;
+  @extend %scroll-without-scrollbar;
+
+  &-item {
+    position: relative;
+    color: $white-color;
+    background: linear-gradient(to bottom right, lighten($primary-color, 5), darken($primary-color, 25));
+    border-radius: 10px;
+    @include flex(column, center, center);
+    cursor: pointer;
+    
+    &:nth-child(2n) {
+      background: linear-gradient(to bottom right, lighten($red-color, 5), darken($red-color, 25));
+    }
+
+    &:nth-child(3n) {
+      background: linear-gradient(to bottom right, lighten($blue-color, 5), darken($blue-color, 25));
+    }
+
+    &:nth-child(4n) {
+      background: linear-gradient(to bottom right, lighten($green-color, 5), darken($green-color, 25));
+    }
+
+    &:nth-child(5n + 1) {
+      background: linear-gradient(to bottom right, lighten($pink-color, 5), darken($pink-color, 25));
+    }
+
+    &:nth-child(6n) {
+      background: linear-gradient(to bottom right, lighten($secondary-color, 5), darken($secondary-color, 25));
+    }
+
+    &:nth-child(7n) {
+      background: linear-gradient(to bottom right, lighten($light-green-color, 5), darken($light-green-color, 25));
+    }
+
+    &:nth-child(8n) {
+      background: linear-gradient(to bottom right, lighten($light-blue-color, 5), darken($light-blue-color, 25));
+    }
+
+    &:nth-child(1) {
+      color: $primary-color;
+      background: none;
+      border: 2px solid $primary-color;
+    }
+    
+    &-title {
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+
+    &-notes {
+      font-size: .8rem;
+    }
+
+
+    &-icon {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      font-size: 1.2rem;
+
+      &.edit {
+        left: auto;
+        right: 5px;
+      }
+    }
+  }
+}

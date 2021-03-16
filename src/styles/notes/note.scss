@@ -1,0 +1,72 @@
+.no-note {
+  width: 65%;
+  height: 100%;
+  color: $grey-color;
+  @include flex(row, center, center);
+}
+
+.note {
+  width: 65%;
+  height: 100%;
+  padding: 10px 50px 10px 20px;
+  @extend %scroll-without-scrollbar;
+
+  &-date {
+    text-align: center;
+    font-size: .8rem;
+    color: $grey-color;
+  }
+
+  &-category,
+  &-title {
+    margin: 10px 0;
+  }
+
+  &-category {
+    color: $green-color;
+  }
+
+  &-title,
+  &-body {
+    color: $secondary-color;
+  }
+
+  &-body {
+    line-height: 1.5em;
+    word-wrap: break-word;
+  }
+
+  &-options {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    @include flex(column);
+
+    &-update-button,
+    &-markmap-button,
+    &-delete-button,
+    &-add-to-category-button {
+      margin: 5px 0;
+      height: 30px;
+      width: 30px;
+      font-size: 1.15rem;
+      border: none;
+    }
+
+    &-update-button {
+      color: $secondary-color;
+    }
+
+    &-markmap-button {
+      color: $light-green-color;
+    }
+    
+    &-delete-button {
+      color: $red-color;
+    }
+
+    &-add-to-category-button {
+      color: $green-color;
+    }
+  }
+}

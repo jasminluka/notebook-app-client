@@ -1,0 +1,29 @@
+.info {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 300px;
+  min-height: 150px;
+  padding: 20px;
+  color: $white-color;
+  background: rgba(0, 0, 0, .7);
+  border-radius: 10px;
+  @include flex(column);
+
+  &-title {
+    color: $primary-color;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  &-body {
+    margin: 10px 0;
+    font-size: .8rem;
+    line-height: 1.5;
+  }
+
+  &-date {
+    color: $light-green-color;
+    font-size: .7rem;
+  }
+}

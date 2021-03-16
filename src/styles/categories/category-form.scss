@@ -1,0 +1,52 @@
+.category-form {
+  width: 50%;
+  height: 100%;
+  margin: 50px auto;
+  @include flex(column);
+
+  &-title-input,
+  &-cancel-button,
+  &-delete-button,
+  &-submit-button {
+    padding: 10px 20px;
+    color: $secondary-color;
+    border-radius: 15px;
+    border: none;
+  }
+
+  &-title-input {
+    margin-bottom: 20px;
+
+    &::placeholder {
+      color: $primary-color;
+      font-size: .9rem;
+      font-style: italic;
+    }
+  }
+
+  .options {
+    @include flex(row, space-between);
+  }
+
+  &-delete-button,
+  &-cancel-button,
+  &-submit-button {
+    @extend %form-button;
+  }
+
+  &-delete-button {
+    background: linear-gradient(to top right, $red-color, $pink-color);
+  }
+
+  &-cancel-button {
+    background: linear-gradient(to top right, $blue-color, $light-blue-color);
+  }
+
+  &-submit-button {
+    background: linear-gradient(to top right, $primary-color, $light-primary-color);
+    
+    &:disabled {
+      @extend %disabled-button;
+    }
+  }
+}
